@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        outcomeLabel.accessibilityIdentifier = "outcomeLabel"
     }
     //
     /* group of functional buttons */
@@ -147,15 +148,18 @@ class ViewController: UIViewController {
             break
         }
         
-        firstNumber = String(equationOutcome)
+       
 
         
         // check if outcome has digits after coma
         if(equationOutcome.isInteger) {
             isThereCommaInFirstNum = false
+            //in order to get rid of .0 when displaying integer values
+            firstNumber = String(format: "%.0f", equationOutcome)
         }
         else{
             isThereCommaInFirstNum = true
+            firstNumber = String(equationOutcome)
         }
         // check if outcome is negative number
         if(equationOutcome < 0){
