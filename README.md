@@ -24,7 +24,7 @@ Clone repo and launch using xCode
 
 
 ## Features
-List of features ready and TODOs for future development
+List of features ready
 * Responsive design
 * All basic calculator operations are covered
 * Project contains UI Tests
