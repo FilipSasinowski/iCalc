@@ -28,6 +28,9 @@ class ViewController: UIViewController {
     // flag to track if there already is a comma
     var isThereCommaInFirstNum : Bool = false
     var isThereCommaInSecondNum : Bool = false
+    // is current number a negative flags
+    var isFirstNumberNegative : Bool = false
+    var isSecondNumberNegative : Bool = false
     //
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +51,61 @@ class ViewController: UIViewController {
     }
     // makes current number the opposite of itself
     @IBAction func oppositeButtonPressed(_ sender: UIButton) {
+        switch currentNumber {
+        case .first:
+            if isFirstNumberNegative {
+                isFirstNumberNegative = false
+            }
+            else{
+                isFirstNumberNegative = true
+            }
+            firstNumber =  String((-1) * (Double(firstNumber) ?? 0))
+            outcomeLabel.text = firstNumber
+            break
+        case .second:
+            if isSecondNumberNegative {
+                isSecondNumberNegative = false
+            }
+            else{
+                isSecondNumberNegative = true
+            }
+            secondNumber =  String((-1) * (Double(secondNumber) ?? 0))
+            outcomeLabel.text = secondNumber
+            break
+        }
         
+        clearFirstNumber = true
+        currentNumber = currentNumberValues.first
+        outcomeLabel.text = firstNumber
     }
     // divides current number by 100
     @IBAction func percentButtonPressed(_ sender: UIButton) {
-        
+        // check if outcome has digits after coma
+        switch currentNumber {
+        case .first:
+            let firstNumberDiviedBy100 = (Double(firstNumber) ?? 0) / (100)
+            if(firstNumberDiviedBy100.isInteger) {
+                isThereCommaInFirstNum = false
+            }
+            else{
+                isThereCommaInFirstNum = true
+            }
+            firstNumber =  String(firstNumberDiviedBy100)
+            outcomeLabel.text = firstNumber
+            break
+        case .second:
+            let secondNumberDiviedBy100 = (Double(secondNumber) ?? 0) / (100)
+            if(secondNumberDiviedBy100.isInteger) {
+                isThereCommaInSecondNum = false
+            }
+            else{
+                isThereCommaInSecondNum = true
+            }
+            secondNumber =  String(secondNumberDiviedBy100)
+            outcomeLabel.text = secondNumber
+            break
+        }
+      
     }
     // marks current operation as divide
     @IBAction func divideButtonPressed(_ sender: UIButton) {
@@ -96,12 +149,19 @@ class ViewController: UIViewController {
         
         firstNumber = String(equationOutcome)
 
+        
+        // check if outcome has digits after coma
         if(equationOutcome.isInteger) {
             isThereCommaInFirstNum = false
         }
         else{
             isThereCommaInFirstNum = true
         }
+        // check if outcome is negative number
+        if(equationOutcome < 0){
+            isFirstNumberNegative = true
+        }
+        
         clearFirstNumber = true
         currentNumber = currentNumberValues.first
         outcomeLabel.text = firstNumber
@@ -147,6 +207,12 @@ class ViewController: UIViewController {
     }
     /* after pressing this button user's digit input goes to the right of the comma */
     @IBAction func commaButtonPressed(_ sender: UIButton) {
+        if(clearFirstNumber){
+            firstNumber = "0"
+            clearFirstNumber = false
+        }
+        
+        
             switch currentNumber {
                 case .first:
                     if(isThereCommaInFirstNum == false){
@@ -157,6 +223,9 @@ class ViewController: UIViewController {
                 case .second:
                     if(isThereCommaInSecondNum == false){
                         isThereCommaInSecondNum = true
+                        if(secondNumber == ""){
+                            secondNumber = "0"
+                        }
                         secondNumber += "."
                         outcomeLabel.text = secondNumber
                     }
