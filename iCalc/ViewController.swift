@@ -148,7 +148,7 @@ class ViewController: UIViewController {
             break
         }
         
-       
+        
 
         
         // check if outcome has digits after coma

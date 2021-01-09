@@ -49,6 +49,7 @@
 		C553C34B25A9C149000DCE3C /* iCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C553C34F25A9C149000DCE3C /* iCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCalcUITests.swift; sourceTree = "<group>"; };
 		C553C35125A9C149000DCE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C553C37225AA2788000DCE3C /* README.md */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		C553C32125A9C147000DCE3C = {
 			isa = PBXGroup;
 			children = (
+				C553C37225AA2788000DCE3C /* README.md */,
 				C553C32C25A9C147000DCE3C /* iCalc */,
 				C553C34325A9C149000DCE3C /* iCalcTests */,
 				C553C34E25A9C149000DCE3C /* iCalcUITests */,
