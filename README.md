@@ -34,7 +34,7 @@ To-do list:
 * Create different layout for landscape mode and use the additional space to create more cool buttons that allow the user to make more advanced equations
 
 ## Status
-Project is:  _no longer continue_ due to lack of time, might be renewed in the future
+Project is:  _no longer continued_ due to lack of time, might be renewed in the future
 
 ## Inspiration
 Project inspired by iPhone 6 calculator app.
