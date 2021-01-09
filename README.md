@@ -3,7 +3,6 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
@@ -19,9 +18,6 @@ Purpose of this project is to learn more about Swift's responsive UI and UI test
 
 ## Setup
 Clone repo and launch using xCode
-
-## Code Examples
-
 
 ## Features
 List of features ready
