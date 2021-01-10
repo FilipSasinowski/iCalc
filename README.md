@@ -15,8 +15,8 @@
 Purpose of this project is to learn more about Swift's responsive UI and UI tests.
 
 ## Screenshots
-![Portrait mode on iPhone 11](docImg/image1.png)
-![Landscape mode on iPhone 11](docImg/image2.png)
+![Portrait mode on iPhone 11](Documentation/Portrait.png)
+![Landscape mode on iPhone 11](Documentation/Landscape.png)
 ## Technologies
 * Swift - version 5.1
 
