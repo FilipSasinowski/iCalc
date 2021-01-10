@@ -14,8 +14,8 @@
 Purpose of this project is to learn more about Swift's responsive UI and UI tests.
 
 ## Screenshots
-![Portrait mode on iPhone 11](Documentation/Portrait.png)
-![Landscape mode on iPhone 11](Documentation/Landscape.png)
+![Portrait mode on iPhone 11](https://github.com/FilipSasinowski/iCalc/blob/main/docImg/image1.png)
+![Landscape mode on iPhone 11](https://github.com/FilipSasinowski/iCalc/blob/main/docImg/image2.png)
 ## Technologies
 * Swift - version 5.1
 
