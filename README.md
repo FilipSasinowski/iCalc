@@ -3,7 +3,6 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
@@ -23,11 +22,8 @@ Purpose of this project is to learn more about Swift's responsive UI and UI test
 ## Setup
 Clone repo and launch using xCode
 
-## Code Examples
-
-
 ## Features
-List of features ready and TODOs for future development
+List of features ready
 * Responsive design
 * All basic calculator operations are covered
 * Project contains UI Tests
@@ -37,7 +33,7 @@ To-do list:
 * Create different layout for landscape mode and use the additional space to create more cool buttons that allow the user to make more advanced equations
 
 ## Status
-Project is:  _no longer continue_ due to lack of time, might be renewed in the future
+Project is:  _no longer continued_ due to lack of time, might be renewed in the future
 
 ## Inspiration
 Project inspired by iPhone 6 calculator app.
