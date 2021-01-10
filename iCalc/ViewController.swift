@@ -81,9 +81,13 @@ class ViewController: UIViewController {
     }
     // divides current number by 100
     @IBAction func percentButtonPressed(_ sender: UIButton) {
+        clearFirstNumber = true
+        currentNumber = .first
+        if(secondNumber != ""){
+            firstNumber = secondNumber
+        }
         // check if outcome has digits after coma
-        switch currentNumber {
-        case .first:
+        
             let firstNumberDiviedBy100 = (Double(firstNumber) ?? 0) / (100)
             if(firstNumberDiviedBy100.isInteger) {
                 isThereCommaInFirstNum = false
@@ -93,19 +97,7 @@ class ViewController: UIViewController {
             }
             firstNumber =  String(firstNumberDiviedBy100)
             outcomeLabel.text = firstNumber
-            break
-        case .second:
-            let secondNumberDiviedBy100 = (Double(secondNumber) ?? 0) / (100)
-            if(secondNumberDiviedBy100.isInteger) {
-                isThereCommaInSecondNum = false
-            }
-            else{
-                isThereCommaInSecondNum = true
-            }
-            secondNumber =  String(secondNumberDiviedBy100)
-            outcomeLabel.text = secondNumber
-            break
-        }
+          
       
     }
     // marks current operation as divide
@@ -166,9 +158,11 @@ class ViewController: UIViewController {
             isFirstNumberNegative = true
         }
         
+        if(currentOperation != .none){
         clearFirstNumber = true
         currentNumber = currentNumberValues.first
         outcomeLabel.text = firstNumber
+        }
     }
     
     /* group of digit buttons */
@@ -255,6 +249,7 @@ class ViewController: UIViewController {
             currentOperation = currentOperationValues.plus
             break
         case .none:
+            currentOperation = currentOperationValues.none
             break
         }
     }

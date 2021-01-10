@@ -162,6 +162,18 @@ class iCalcUITests: XCTestCase {
         buttonEqual.tap()
         XCTAssertEqual(app.staticTexts.element(matching:.any, identifier: "outcomeLabel").label, "0.1")
 
+        // test % button press after choosing operation
+        button8.tap()
+        buttonDivide.tap()
+        buttonPercent.tap()
+        XCTAssertEqual(app.staticTexts.element(matching:.any, identifier: "outcomeLabel").label, "0.08")
+        // test another % situation
+        button8.tap()
+        buttonDivide.tap()
+        button5.tap()
+        buttonPercent.tap()
+        XCTAssertEqual(app.staticTexts.element(matching:.any, identifier: "outcomeLabel").label, "0.05")
+
         
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
